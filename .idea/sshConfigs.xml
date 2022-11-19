@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="SshConfigs">
+    <configs>
+      <sshConfig authType="PASSWORD" connectionConfig="{&quot;serverAliveInterval&quot;:300}" host="walab.handong.edu" id="9f640445-e148-4f7f-b3c8-9abc1c79feff" port="8080" customName="walab.handong.edu" nameFormat="CUSTOM" username="p2_21900579" useOpenSSHConfig="true">
+        <option name="customName" value="walab.handong.edu" />
+      </sshConfig>
+    </configs>
+  </component>
+</project>
