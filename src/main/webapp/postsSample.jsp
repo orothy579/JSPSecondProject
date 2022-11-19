@@ -1,6 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-<%@page import="dao.MemberDAO, bean.MemberVO,java.util.*"%>
+<%@page import="dao.BoardDAO, bean.BoardVO,java.util.*"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <!DOCTYPE html>
 <html>
@@ -36,33 +36,31 @@
 </script>
 </head>
 <body>
-<h1>회원관리게시판</h1>
+<h1>자유게시판</h1>
 <%
-	MemberDAO memberDAO = new MemberDAO();
-	List<MemberVO> list = memberDAO.getMemberList();
+	BoardDAO boardDAO = new BoardDAO();
+	List<BoardVO> list = boardDAO.getBoardList();
 	request.setAttribute("list",list);
 %>
 <table id="list" width="90%">
 <tr>
-	<th>UserId</th>
-	<th>Password</th>
-	<th>Username</th>
-	<th>Email</th>
-	<th>Photo</th>
-	<th>Detail</th>
+	<th>Id</th>
+	<th>Title</th>
+	<th>Writer</th>
+	<th>Content</th>
 	<th>Regdate</th>
+	<th>Edit</th>
+	<th>Delete</th>
 </tr>
 <c:forEach items="${list}" var="u">
 	<tr>
-		<td>${u.userid}</td>
-		<td>${u.password}</td>
-		<td>${u.username}</td>
-		<td>${u.email}</td>
-		<td>${u.photo}</td>
-		<td>${u.detail}</td>
-		<td>${u.regdate}</td>
-		<td><a href="editform.jsp?id=${u.sid}">Edit</a></td>
-		<td><a href="javascript:delete_ok('${u.sid}')">Delete</a></td>
+		<td>${u.getSeq()}</td>
+		<td>${u.getTitle()}</td>
+		<td>${u.getWriter()}</td>
+		<td>${u.getContent()}</td>
+		<td>${u.getRegdate()}</td>
+		<td><a href="editform.jsp?id=${u.getSeq()}">Edit</a></td>
+		<td><a href="javascript:delete_ok('${u.getSeq()}')">Delete</a></td>
 	</tr>
 </c:forEach>
 </table>

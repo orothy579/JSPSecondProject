@@ -1,4 +1,4 @@
-package com.crud.bean;
+package bean;
 
 import java.util.Date;
 

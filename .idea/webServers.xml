@@ -3,7 +3,7 @@
   <component name="WebServers">
     <option name="servers">
       <webServer id="65bd7dca-7b13-4d37-bedc-0de34fd9f2ab" name="walab.handong.edu" url="http://walab.handong.edu">
-        <fileTransfer rootFolder="walab.handong.edu" accessType="SFTP" host="walab.handong.edu" port="8080" sshConfigId="9f640445-e148-4f7f-b3c8-9abc1c79feff" sshConfig="walab.handong.edu">
+        <fileTransfer rootFolder="walab.handong.edu" accessType="SFTP" host="Walab" port="8080" sshConfigId="9f640445-e148-4f7f-b3c8-9abc1c79feff" sshConfig="walab.handong.edu">
           <advancedOptions>
             <advancedOptions dataProtectionLevel="Private" passiveMode="true" shareSSLContext="true" />
           </advancedOptions>
