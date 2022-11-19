@@ -8,8 +8,6 @@
 
 <% request.setCharacterEncoding("utf-8"); %>
 
-<jsp:setProperty property="*" name="u"/>
-
 <%
 	MemberDAO memberDAO = new MemberDAO();
 	FileUpload upload = new FileUpload();
