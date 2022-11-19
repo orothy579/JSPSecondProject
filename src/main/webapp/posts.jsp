@@ -41,6 +41,7 @@
 	MemberDAO memberDAO = new MemberDAO();
 	List<MemberVO> list = memberDAO.getMemberList();
 	request.setAttribute("list",list);
+
 %>
 <table id="list" width="90%">
 <tr>
@@ -58,7 +59,7 @@
 		<td>${u.password}</td>
 		<td>${u.username}</td>
 		<td>${u.email}</td>
-		<td>${u.photo}</td>
+		<td><c:if test="${u.photo ne ''}" > <br /><img src = "${pageContext.request.contextPath }/upload/${u.photo}" class="photo"></c:if></td>
 		<td>${u.detail}</td>
 		<td>${u.regdate}</td>
 		<td><a href="editform.jsp?id=${u.sid}">Edit</a></td>

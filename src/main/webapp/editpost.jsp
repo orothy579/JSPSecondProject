@@ -1,14 +1,19 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <%@page import="dao.MemberDAO"%>
+<%@page import="common.FileUpload"%>
+<%@page import="bean.MemberVO"%>
+
+
 
 <% request.setCharacterEncoding("utf-8"); %>
 
-<jsp:useBean id="u" class="bean.MemberVO" />
 <jsp:setProperty property="*" name="u"/>
 
 <%
 	MemberDAO memberDAO = new MemberDAO();
+	FileUpload upload = new FileUpload();
+	MemberVO u = upload.uploadPhoto(request);
 	int i=memberDAO.updateMember(u);
 	response.sendRedirect("posts.jsp");
 	String msg = "데이터 편집 성공 !";
